@@ -1,17 +1,14 @@
-package lesson_1;
+package homework_1.lesson_2;
 
 abstract class Car {
-    public Engine engine;
+    private IEngine engine;
+    //Заменил класс двигателя на интерфейс для дальнейшего расширения ПО без глобального изменения кода.
     private String color;
     private String name;
 
-    protected void start() {
-        System.out.println("Car starting");
-    }
-
     abstract void open();
 
-    public Engine getEngine() {
+    public IEngine getEngine() {
         return engine;
     }
 
